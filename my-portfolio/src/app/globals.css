@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0f14;
+  --foreground: #e6edf3;
+  --neon-cyan: #00E5FF;
+  --neon-violet: #8A2BE2;
+  --neon-green: #39FF14;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #f8fafc;
+    --foreground: #0f172a;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(60% 50% at 50% 0%, rgba(0,229,255,0.05), transparent),
+              radial-gradient(40% 30% at 80% 10%, rgba(138,43,226,0.05), transparent),
+              var(--background);
+  color: var(--foreground);
+}
+
+/* Futuristic focus outlines */
+:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--neon-cyan) 70%, white 30%);
+  outline-offset: 2px;
+}
