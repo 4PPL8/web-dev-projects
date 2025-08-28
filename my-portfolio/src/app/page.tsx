@@ -161,10 +161,10 @@ export default function Home() {
         </Section>
 
         <Section id="experience" title="Experience">
-          <ol className="relative border-l border-white/10 pl-6 space-y-8">
+          <ol className="relative border-l border-white/10 pl-10 md:pl-12 space-y-8">
             {["Senior Developer @ NeoTech", "Frontend Engineer @ VisionLabs", "UI Engineer @ Hyper"].map((role) => (
               <li key={role} className="relative">
-                <span className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.9)]" />
+                <span className="absolute -left-[10px] top-1 h-3.5 w-3.5 rounded-full bg-purple-500 ring-2 ring-purple-400/60 pointer-events-none" />
                 <h4 className="text-lg font-semibold">{role}</h4>
                 <p className="text-white/70 text-sm">Shipped high-impact features, improved performance, and led motion design.</p>
               </li>
