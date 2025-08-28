@@ -22,6 +22,11 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://example.com",
   },
+  icons: {
+    icon: "/my-favicon.png",
+    shortcut: "/my-favicon.png",
+    apple: "/my-favicon.png",
+  },
 };
 
 export default function RootLayout({
