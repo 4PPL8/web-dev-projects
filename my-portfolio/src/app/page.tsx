@@ -68,7 +68,7 @@ const Section = ({ id, title, children }: { id: string; title: string; children:
 };
 
 export default function Home() {
-  const full = useMemo(() => "Hi, I’m 4PPL3 — Building Sleek, Performant Interfaces", []);
+  const full = useMemo(() => "Hi, I’m Qasim Arshad — Building Sleek, Performant Interfaces", []);
   const [typed, setTyped] = useState("");
   const [progress, setProgress] = useState(0);
 
@@ -104,7 +104,7 @@ export default function Home() {
 
       <nav className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/5 border-b border-white/10">
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
-          <span className="font-bold tracking-tight">4PPL3</span>
+          <span className="font-bold tracking-tight">Qasim Arshad</span>
           <div className="hidden md:flex items-center gap-6 text-sm text-white/80">
             <a href="#about" className="hover:text-purple-300 transition">About</a>
             <a href="#skills" className="hover:text-purple-300 transition">Skills</a>
@@ -186,7 +186,7 @@ export default function Home() {
 
       <footer className="border-t border-white/10 mt-10">
         <div className="max-w-6xl mx-auto px-6 py-10 text-sm text-white/60">
-          © {new Date().getFullYear()} 4PPL3 — All rights reserved.
+          © {new Date().getFullYear()} Qasim Arshad — All rights reserved.
         </div>
       </footer>
     </div>

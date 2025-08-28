@@ -13,11 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "4PPL3 — Futuristic Portfolio",
+  title: "Qasim Arshad — Futuristic Portfolio",
   description: "Immersive, high-performance portfolio with animations and 3D.",
   metadataBase: new URL("https://example.com"),
   openGraph: {
-    title: "4PPL3 — Futuristic Portfolio",
+    title: "Qasim Arshad — Futuristic Portfolio",
     description: "Immersive, high-performance portfolio with animations and 3D.",
     type: "website",
     url: "https://example.com",
