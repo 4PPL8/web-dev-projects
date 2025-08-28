@@ -9,8 +9,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-jersey);
+  --font-mono: var(--font-pixel);
 }
 
 @media (prefers-color-scheme: light) {
@@ -28,9 +28,39 @@ body {
     radial-gradient(35% 25% at 80% 10%, color-mix(in oklab, var(--accent-purple) 15%, transparent), transparent),
     var(--background);
   color: var(--foreground);
+  font-family: var(--font-pixel), monospace;
+  letter-spacing: 0.02em; /* extra breathing room for pixel glyphs */
+}
+
+/* Headings use Jersey 15 */
+h1, h2, h3, h4 {
+  font-family: var(--font-jersey), system-ui, sans-serif;
+  letter-spacing: 0.01em;
 }
 
 :focus-visible {
   outline: 2px solid color-mix(in oklab, var(--accent-purple) 70%, white 30%);
   outline-offset: 2px;
+}
+
+/* Typography scaling */
+html { font-size: 20px; }
+body { line-height: 1.75; }
+
+/* Make small text readable */
+.text-sm { font-size: 1rem; }
+
+/* Slightly bump base and lg */
+.text-base { font-size: 1.125rem; }
+.text-lg { font-size: 1.25rem; }
+
+/* Disable text rendering optimizations for crisp pixel fonts */
+html, body {
+  -webkit-font-smoothing: none;            /* Safari/WebKit */
+  -moz-osx-font-smoothing: auto;           /* macOS Firefox */
+  /* Avoid nonstandard font-smooth and avoid optimizeSpeed which can distort shapes */
+  text-rendering: auto;
+  font-variant-ligatures: none;            /* Disable ligatures */
+  font-feature-settings: "liga" 0;        /* Keep ligatures off */
+  font-synthesis: none;                    /* Prevent synthetic bold/italic */
 }

@@ -1,31 +1,39 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Jersey_15, VT323 } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const jersey = Jersey_15({
+  weight: "400",
+  variable: "--font-jersey",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const pixel = VT323({
+  weight: "400",
+  variable: "--font-pixel",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Qasim Arshad — Futuristic Portfolio",
+  title: "Qasim Arshad ",
   description: "Immersive, high-performance portfolio with animations and 3D.",
   metadataBase: new URL("https://example.com"),
   openGraph: {
-    title: "Qasim Arshad — Futuristic Portfolio",
+    title: "Qasim Arshad ",
     description: "Immersive, high-performance portfolio with animations and 3D.",
     type: "website",
     url: "https://example.com",
   },
   icons: {
-    icon: "/my-favicon.png",
-    shortcut: "/my-favicon.png",
-    apple: "/my-favicon.png",
+    icon: [
+      { url: "/my-favicon.png", type: "image/png" },
+    ],
+    shortcut: [
+      { url: "/my-favicon.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/my-favicon.png", type: "image/png" },
+    ],
   },
 };
 
@@ -36,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body className={`${jersey.variable} ${pixel.variable} antialiased`}>{children}</body>
     </html>
   );
 }
